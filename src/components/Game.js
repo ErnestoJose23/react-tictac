@@ -8,7 +8,13 @@ export default class Game extends React.Componenet {
             stepNumber: 0,
             history: [
                 { squares: Array(9).fill(null) }
-            ]
-        }
+            ],
+        };
+    }
+    jumpTo(step) {
+        this.setState({
+            stepNumber: step,
+            xIsNext: (step % 2 === 0),
+        })
     }
 }
