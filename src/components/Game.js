@@ -26,6 +26,13 @@ export default class Game extends React.Componenet {
             return;
         }
         squares[i] = this.state.xIsNext ? 'X' : 'O';
+        this.setState({
+            history: history.concat({
+                squares: squares,
+            }),
+            xIsNext: !this.state.xIsNext;
+            stepNumber: history.length;
+        });
     }
 }
 
