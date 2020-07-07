@@ -1,4 +1,5 @@
 import React from 'react';
+import Board from './Board';
 
 export default class Game extends React.Componenet {
     constructor(props) {
@@ -42,12 +43,22 @@ export default class Game extends React.Componenet {
             const desc = move ? 0 'Go to #' + move : 'Start the Game';
             return (
                 <li key={move}>
-                    <button onClick={(=> { this.jumpTo(move) })}>
+                    <button onClick={() => { this.jumpTo(move) }}>
                         {desc}
                     </button>
                 </li>
             )
-        })
+        });
+
+        let status = winner ? 'Winner is ' + winner : 'Next player is ' + (this.state.xIsNext ? 'X' : 'O');
+
+        return (
+            <div className="game">
+                <div className="Game-board">
+                    <Board></Board>
+                </div>
+            </div>
+        );
     }
 }
 
