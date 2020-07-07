@@ -18,7 +18,7 @@ export default class Game extends React.Componenet {
         });
     }
     handleClick(i) {
-        const history = trhis.state.history.slice(0, this.state.stepNumber + 1);
+        const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.lenght - 1];
         const squares = current.squares.slice();
         const winner = calculateWinner(squares);
@@ -33,6 +33,12 @@ export default class Game extends React.Componenet {
             xIsNext: !this.state.xIsNext;
             stepNumber: history.length;
         });
+    }
+    render() {
+        const history = this.state.history;
+        const current = history[history.length - 1];
+        const winner = calculateWinner(current.squares);
+
     }
 }
 
