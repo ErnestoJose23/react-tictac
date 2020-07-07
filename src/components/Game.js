@@ -38,7 +38,16 @@ export default class Game extends React.Componenet {
         const history = this.state.history;
         const current = history[history.length - 1];
         const winner = calculateWinner(current.squares);
-
+        const moves = history.map((step, moce) => {
+            const desc = move ? 0 'Go to #' + move : 'Start the Game';
+            return (
+                <li key={move}>
+                    <button onClick={(=> { this.jumpTo(move) })}>
+                        {desc}
+                    </button>
+                </li>
+            )
+        })
     }
 }
 
