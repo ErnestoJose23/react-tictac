@@ -28,3 +28,16 @@
   display: flex;
   margin: 0 auto;
 }
+
+
+ul{
+  padding-left: 30px;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.satuts{
+  margin-bottom: 10px;
+}
