@@ -1,24 +1,15 @@
 .square{
-  background: white;
-  border: 1px solid gray;
+  background-color: #ffffff;
+  border: 1px #999 solid;
   float: left;
+  font-size: 50px;
+  font-weight: bold;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
+  text-align: center;
   width: 80px;
   height: 80px;
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  line-height: 80px;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.board-row:after{
-  clear: both;
-  content: "";
-  display: table;
+  display: inline-block;
+  border-radius: 5px;
 }
