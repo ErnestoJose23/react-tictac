@@ -78,5 +78,11 @@ function calculateWinner(squares) {
         [2, 4, 6]
 
     ];
+    for (let i = 0; i < winnerLines; i++) {
+        const [a, b, c] = winnerLines[i];
+        if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c]) {
+            return squares[a];
+        }
+    }
     return null;
 }
