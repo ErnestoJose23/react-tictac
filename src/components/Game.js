@@ -67,5 +67,8 @@ export default class Game extends React.Componenet {
 }
 
 function calculateWinner(squares) {
+    const winnerLines = [
+        [0, 1, 2]
+    ]
     return null;
 }
